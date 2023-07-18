@@ -3,7 +3,7 @@ const productContainerEL = document.querySelector("#product-container");
 getProducts();
 
 async function getProducts() {
-  //поучаем ответ с файла products.json
+  //получаем ответ с файла products.json
   const response = await fetch("./js/products.json");
 
   //парсим из JSON в JS формат
