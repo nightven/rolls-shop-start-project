@@ -30,14 +30,14 @@ function changeLanguage(langs) {
   }
   //устапавливаем выбраный язык
   selectEl.value = hash;
-  
+
   document.querySelector("title").textContent = langs["title"][hash];
-  
+
   for (let key in langs) {
     if (key === "title") {
       continue;
     }
-    console.log(hash);
+
     const content = langs[key][hash];
     // console.dir( document.querySelector(".lng-" + key).textContent)
     document.querySelector(".lng-" + key).textContent = content;
