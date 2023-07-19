@@ -18,9 +18,20 @@
   <body>
     <header class="header">
       <div class="container text-center">
-        <img src="img/logo/logo.svg" width="92" alt="Суши и пицца" />
-        <div class="display-4">Доставка роллов</div>
-        <p class="lead">Оперативно и вкусно</p>
+        <img
+          class="header__ing"
+          src="img/logo/logo.svg"
+          width="92"
+          alt="Суши и пицца"
+        />
+        <select class="change-lang">
+          <option value="ua" selected>UA</option>
+          <option value="ru">RU</option>
+          <option value="en">EN</option>
+        </select>
+
+        <div class="display-4 lng-header__title">Доставка роллов</div>
+        <p class="lead lng-lead">Оперативно и вкусно</p>
       </div>
     </header>
 
@@ -35,8 +46,12 @@
           <!-- Корзина -->
           <div class="card mb-4">
             <div class="card-body">
-              <h4 class="card-title">Ваш заказ</h4>
-              <div data-cart-empty class="alert alert-secondary" role="alert">
+              <h4 class="card-title lng-your__order">Ваш заказ</h4>
+              <div
+                data-cart-empty
+                class="alert alert-secondary lng-bucket"
+                role="alert"
+              >
                 Корзина пуста
               </div>
               <!-- cart-wrapper -->
@@ -48,12 +63,14 @@
               <!-- Стоимость заказа -->
               <div class="cart-total">
                 <p data-cart-delivery class="none">
-                  <span class="h5">Доставка:</span>
+                  <span class="h5 lng-delivery">Доставка:</span>
                   <span class="delivery-cost">250 ₴</span>
                 </p>
-                <span class="small">Беслпатно при заказе от 600 ₴</span>
+                <span class="small lng-delivery_prise"
+                  >Беслпатно при заказе от 600 ₴</span
+                >
                 <p>
-                  <span class="h5">Итого:</span>
+                  <span class="h5 lng-total">Итого:</span>
                   <span class="total-price">0</span>
                   <span class="rouble">₴</span>
                 </p>
@@ -63,16 +80,18 @@
 
             <!-- Оформить заказ -->
             <div id="order-form" class="card-body border-top none">
-              <h4 class="card-title">Оформить заказ</h4>
+              <h4 class="card-title lng-order">Оформить заказ</h4>
               <form>
                 <div class="form-group">
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control lng-phone"
                     placeholder="Ваш номер телефона"
                   />
                 </div>
-                <button type="submit" class="btn btn-primary">Заказать</button>
+                <button type="submit" class="btn btn-primary lng-ordered">
+                  Заказать
+                </button>
               </form>
             </div>
             <!--  Оформить заказ -->
@@ -84,6 +103,7 @@
 
     <!-- Подключаем скрипты -->
     <script src="./js/renderProducts.js"></script>
+    <script src="./js/changeLang.js"></script>
     <script src="./js/calcCartPrice.js"></script>
     <script src="./js/toggleCartStatus.js"></script>
     <script src="./js/counter.js" type="module"></script>

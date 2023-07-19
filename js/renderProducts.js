@@ -25,7 +25,7 @@ function renderProducts(array) {
           <div class="card-body text-center">
             <h4 class="item-title">${title}</h4>
             <p>
-              <small data-items-in-box class="text-muted">${itemBox} шт.</small>
+              <small data-items-in-box class="text-muted">${itemBox} <span class="lng-pcs">шт.</span> </small>
             </p>
 
             <div class="details-wrapper">
@@ -44,7 +44,7 @@ function renderProducts(array) {
             <button
               data-cart
               type="button"
-              class="btn btn-block btn-outline-warning"
+              class="btn btn-block btn-outline-warning lng-in_bucket"
             >
               + в корзину
             </button>
