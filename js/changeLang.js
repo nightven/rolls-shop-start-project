@@ -37,9 +37,12 @@ function changeLanguage(langs) {
     if (key === "title") {
       continue;
     }
-
     const content = langs[key][hash];
-    // console.dir( document.querySelector(".lng-" + key).textContent)
-    document.querySelector(".lng-" + key).textContent = content;
+    if (key === "in_bucket") {
+      const cartBtn = document.querySelectorAll(".lng-" + key);
+      cartBtn.forEach((el) => (el.textContent = content));
+    } else {
+      document.querySelector(".lng-" + key).textContent = content;
+    }
   }
 }
