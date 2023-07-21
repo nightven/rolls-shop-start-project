@@ -17,6 +17,7 @@ function changeURLLanguage() {
   location.reload();
 }
 
+
 // меняем язык согласно выбраному селекту
 function changeLanguage(langs) {
   //получаем вибранный язык с юрл
